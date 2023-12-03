@@ -4,4 +4,4 @@ absFilename=`readlink -e "$0"`
 mainDir=`dirname "$absFilename"`
 [[ `lsb_release -d --short | grep -c '20.04'` -gt 0 ]] && dir="$mainDir/20.04" || dir="$mainDir/18.04"
 
-$dir/pyrin-miner
+$dir/pyrin-miner $@
